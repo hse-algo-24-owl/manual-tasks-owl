@@ -4,14 +4,14 @@
 Дана трехдиагональная матрица порядка *n* :
 $$    
 A =     
- \begin{pmatrix}    
-  7 & 6 & 0 & \cdots & 0 & 0 \\    
-  2 & 7 & 6 & \cdots & 0 & 0 \\    
-  0 & 2 & 7 & \cdots & 0 & 0 \\    
-  \vdots  & \vdots & \vdots & \ddots & \vdots & \vdots  \\    
-  0 & 0 & 0 & \cdots & 7 & 6 \\    
-  0 & 0 & 0 & \cdots & 2 & 7     
- \end{pmatrix}    
+\begin{pmatrix}    
+7 & 6 & 0 & \cdots & 0 & 0 \\    
+2 & 7 & 6 & \cdots & 0 & 0 \\    
+0 & 2 & 7 & \cdots & 0 & 0 \\    
+\vdots  & \vdots & \vdots & \ddots & \vdots & \vdots  \\    
+0 & 0 & 0 & \cdots & 7 & 6 \\    
+0 & 0 & 0 & \cdots & 2 & 7     
+\end{pmatrix}    
 $$
 
 Для решения задачи требуется:  
