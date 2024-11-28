@@ -162,8 +162,8 @@ $$
     
 $$
 \begin{cases}
-10 = 5 * 1 * C_1 + 5 * C_2  & \text{для n = 1},\\
-10*10 - 5*5 = 5^2 * 2 * C_1 + 5^2 * C_2 & \text{для n = 2}.
+10 = 5 \ast 1 \ast C_1 + 5 \ast C_2  & \text{для n = 1},\\
+10 \ast 10 - 5 \ast 5 = 5^2 \ast 2 \ast C_1 + 5^2 \ast C_2 & \text{для n = 2}.
 \end{cases} 
 $$
     
