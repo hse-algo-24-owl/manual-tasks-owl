@@ -64,25 +64,21 @@ $a_n = C_{1} \cdot t_{1}^n + C_{2} \cdot t_{2}^n$
 
 $a_n = C_{1} \cdot 1^n + C_{2} \cdot (-1)^n$
 
-$a_{1} = 1$
+$a_{1} = 2$
 
 $a_{2} = 1$
 
-$a_{3} = 1$
-
 $$
 \begin{cases}
-1 = C_{1} \cdot 1^1 + C_{2} \cdot (-1)^1
+2 = C_{1} \cdot 1^1 + C_{2} \cdot (-1)^1
 \\
 1 = C_{1} \cdot 1^2 + C_{2} \cdot (-1)^2
-\\
-1 = C_{1} \cdot 1^3 + C_{2} \cdot (-1)^3
 \end{cases}
 $$
 
 $$
 \begin{cases}
-1 = C_{1} - C_{2}
+2 = C_{1} - C_{2}
 \\
 1 = C_{1} + C_{2}
 \end{cases}
@@ -90,14 +86,14 @@ $$
 
 $$
 \begin{cases}
-C_{1} = 1
+C_{1} = 1,5
 \\
-C_{2} = 0
+C_{2} = -0,5
 \end{cases}
 $$
 
-$a_n = 1 \cdot 1^n + 0 \cdot (-1)^n$
+$a_n = 1,5 \cdot 1^n - 0,5 \cdot (-1)^n$
 
-$c_n = a_{n-1} + a_n$
+$c_n = a_{n-1} + a_{n-2}$
 
-$c_n = 1 \cdot 1^{n-1} + 1 \cdot 1^{n}$
+$c_n = 1,5 \cdot 1^{n-1} - 0,5 \cdot (-1)^{n-2}$
