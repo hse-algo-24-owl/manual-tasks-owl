@@ -117,8 +117,8 @@ $$
 
 $$
 \begin{cases}
-1 = C_1 \cdot 1 + C_2 \cdot 2 \\
-3 = C_1 \cdot 1 + C_2 \cdot 2^2
+1 = C_1 \cdot 1^1 + C_2 \cdot 2^1 \\
+3 = C_1 \cdot 1^1 + C_2 \cdot 2^2
 \end{cases}
 $$
 
