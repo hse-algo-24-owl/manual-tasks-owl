@@ -113,30 +113,23 @@ b_n = C_1 \cdot 1^n + C_2 \cdot 2^n
 \end{align*}
 $$
 
-Используем начальные условия $\ b_1 = 1 \$ и $\ b_2 = 3 \$:
+Используем начальные условия $\ b_1 = 1 \$  и  $\ b_2 = 3 \$:
 
 $$
-\begin{align*}
-\left\{
-\begin{array}{l}
+\begin{cases}
 1 = C_1 \cdot 1 + C_2 \cdot 2 \\
 3 = C_1 \cdot 1 + C_2 \cdot 2^2
-\end{array}
-\right.
-\end{align*}
+\end{cases}
 $$
+
 
 Решим систему уравнений:
 
 $$
-\begin{align*}
-\left\{
-\begin{array}{l}
+\begin{cases}
 C_1 = -1 \\
 C_2 = 1
-\end{array}
-\right.
-\end{align*}
+\end{cases}
 $$
 
 Таким образом, рекуррентное соотношение для $\ b_n \$ будет:
