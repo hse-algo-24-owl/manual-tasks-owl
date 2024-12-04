@@ -52,67 +52,77 @@ c_{n} = c_{n-1}
 $$
 
 
-Из третьего уравнения $c_{n} = c_{n-1}$. Это означает, что $c_{n}$ остается постоянным и равным начальному значению $c_{0} = 1$.
+\begin{align*}
+c_n = c_{n-1} = a_n - a_{n-1} - b_{n-1} = b_n - b_{n-1} - b_{n-1} = b_n - 2b_{n-1}
+\end{align*}
 
-$$
-\begin{aligned}
-& c_{n} = 1 \\
-& \begin{cases}
-a_{n} = a_{n-1} + b_{n-1} + 1 \\
-b_{n} = a_{n-1} + b_{n-1} + 1
-\end{cases}
-\end{aligned}
-$$
+Так как \( a_n = b_n \), то:
 
-Так как $a_{n} = b_{n}$, то:
+\begin{align*}
+b_n = b_{n-1} + b_{n-1} + c_{n-1} = 2b_{n-1} + c_{n-1}
+\end{align*}
 
-$$
-b_{n} = b_{n-1} + b_{n-1} + 1 \\
-b_{n} = 2b_{n-1} + 1
-$$
+Подставим \( c_{n-1} = b_n - 2b_{n-1} \):
+
+\begin{align*}
+b_n = 2b_{n-1} + b_n - 2b_{n-1} = b_n
+\end{align*}
+
+Теперь найдем рекуррентное соотношение для \( b_n \):
+
+\begin{align*}
+b_n = 2b_{n-1} + b_{n-1} - 2b_{n-2}
+\end{align*}
+
+\begin{align*}
+b_n = 3b_{n-1} - 2b_{n-2}
+\end{align*}
 
 Характеристическое уравнение:
 
-Однородное равнение:
+\begin{align*}
+t^2 - 3t + 2 = 0
+\end{align*}
 
-$$
-\begin{aligned}
-& r^{n} = 2r^{n-1} \\
-& r = 2 \\
-& b_{n}^{(g)} = C \cdot 2^{n}
-\end{aligned}
-$$
+Решим характеристическое уравнение:
 
-Частное решение:
+\begin{align*}
+t_1 = 1, \quad t_2 = 2
+\end{align*}
 
-$$
-\begin{aligned}
-& b_{n}^{(ch)} = A \text{ (константа)} \\
-& A = 2A + 1 \\
-& A = -1
-\end{aligned}
-$$
+Таким образом, общее решение будет:
 
-Общее решение:
+\begin{align*}
+b_n = C_1 \cdot 1^n + C_2 \cdot 2^n
+\end{align*}
 
-$$
-b_{n} = C \cdot 2^{n} - 1
-$$
+Используем начальные условия \( b_1 = 1 \) и \( b_2 = 3 \):
 
-Подставим начальное условие $b_{1} = 1$:
+\begin{align*}
+\left\{
+\begin{array}{l}
+1 = C_1 \cdot 1 + C_2 \cdot 2 \\
+3 = C_1 \cdot 1 + C_2 \cdot 2^2
+\end{array}
+\right.
+\end{align*}
 
-$$
-\begin{aligned}
-& 1 = C \cdot 2^{1} - 1 \\
-& C = 1
-\end{aligned}
-$$
+Решим систему уравнений:
 
-Таким образом:
+\begin{align*}
+\left\{
+\begin{array}{l}
+C_1 = -1 \\
+C_2 = 1
+\end{array}
+\right.
+\end{align*}
 
-$$
-b_{n} = 2^{n} - 1
-$$
+Таким образом, решение для \( b_n \) будет:
+
+\begin{align*}
+b_n = -1 \cdot 1^n + 1 \cdot 2^n = 2^n - 1
+\end{align*}
 
 Проверка:
 
