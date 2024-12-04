@@ -89,7 +89,7 @@ $$
 
 $$
 \begin{aligned}
-& b_{n}^{(ch)} = A \text{ (постоянное)} \\
+& b_{n}^{(ch)} = A \text{ (константа)} \\
 & A = 2A + 1 \\
 & A = -1
 \end{aligned}
