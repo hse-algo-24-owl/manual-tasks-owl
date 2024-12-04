@@ -19,11 +19,11 @@ $$
 | $n$ | Маршруты                      | Кол-во |
 | :---: | :----------------------------: | :---: |
 | 1    | $C \rightarrow B$             | 1     |
-| 2    | $C \rightarrow C \rightarrow B$ |       |
-|      | $C \rightarrow A \rightarrow B$ | 3     |
+| 2    | $C \rightarrow C \rightarrow B$ | 3     |
+|      | $C \rightarrow A \rightarrow B$ |       |
 |      | $C \rightarrow B \rightarrow B$ |       |
-| 3    | $C \rightarrow C \rightarrow C \rightarrow B$ |       |
-|      | $C \rightarrow C \rightarrow B \rightarrow B$ | 7     |
+| 3    | $C \rightarrow C \rightarrow C \rightarrow B$ |  7    |
+|      | $C \rightarrow C \rightarrow B \rightarrow B$ |       |
 |      | $C \rightarrow B \rightarrow B \rightarrow B$ |       |
 |      | $C \rightarrow C \rightarrow A \rightarrow B$ |       |
 |      | $C \rightarrow A \rightarrow A \rightarrow B$ |       |
