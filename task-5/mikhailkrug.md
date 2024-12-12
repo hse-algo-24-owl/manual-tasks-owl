@@ -124,7 +124,7 @@ gantt
     B         :b2, after b1, 2h
     C         :b3, after b2, 2h
     C         :b4, after b3, 1h
-    B         :b5, after b4, 1h
+    D         :b5, after b4, 1h
     A         :b6, after b5, 1h
     B         :b7, after b6, 1h
     Окончание выполнения работ : milestone, m2, 01 09:00, 0h
