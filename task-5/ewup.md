@@ -147,25 +147,25 @@ $$
 gantt
     title Распределение задач
     section p1
-    A :a1, 6500, 625
-    A :a2, 7125, 625
-    B :a3, 7750, 750
-    A :a4, 8500, 750
-    B :a5, 9250, 750
-    C :a6, 10000, 2500
-    A :a7, 12500, 2500
-    B :a8, 15000, 2500
-    C :a9, 17500, 2500
-    D :a10, 20000, 500
+    A :a1, 0, 0.625
+    A :a2, after a1, 0.625
+    B :a3, after a2, 0.75
+    A :a4, after a3, 0.75
+    B :a5, after a4, 0.75
+    C :a6, after a5, 2.5
+    A :a7, after a6, 2.5
+    B :a8, after a7, 2.5
+    C :a9, after a8, 2.5
+    D :a10, after a9, 0.5
     section p2
-    B :b1, 6500, 625
-    B :b2, 7125, 625
-    A :b3, 7750, 750
-    B :b4, 8500, 750
-    C :b5, 9250, 750
-    A :b6, 10000, 2500
-    B :b7, 12500, 2500
-    C :b8, 15000, 2500
-    D :b9, 17500, 2500
-    A :b10, 20000, 500
+    B :b1, 0, 0.625
+    B :b2, after b1, 0.625
+    A :b3, after b2, 0.75
+    B :b4, after b3, 0.75
+    C :b5, after b4, 0.75
+    A :b6, after b5, 2.5
+    B :b7, after b6, 2.5
+    C :b8, after b7, 2.5
+    D :b9, after b8, 2.5
+    A :b10, after b9, 0.5
 
