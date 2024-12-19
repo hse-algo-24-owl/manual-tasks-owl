@@ -146,7 +146,6 @@ $$
 ```mermaid
 gantt
     title Распределение задач
-    dateFormat  X
     section p1
     A :a1, 6500, 625
     A :a2, 7125, 625
