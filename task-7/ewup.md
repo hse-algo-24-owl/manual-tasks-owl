@@ -98,17 +98,17 @@ gantt
     section Исполнитель 1
     L         :l, 00:00, 1h
     M         :j, after l, 1h
-    K         :g, after m, 1h
-    I         :c, after k, 1h
-    G         :d, after i, 1h
-    C         :a, after g, 1h
-    A         :b, after c, 1h
+    K         :g, after j, 1h
+    I         :c, after g, 1h
+    G         :d, after c, 1h
+    C         :a, after d, 1h
+    A         :b, after a, 1h
     section Исполнитель 2
     J         :m, 00:00, 1h
-    D         :k, after j, 1h
-    H         :i, after d, 1h
-    E         :h, after h, 1h
-    F         :e, after e, 1h
-    B         :f, after f, 1h
+    D         :k, after m, 1h
+    H         :i, after k, 1h
+    E         :h, after i, 1h
+    F         :e, after h, 1h
+    B         :f, after e, 1h
     Окончание выполнения работ : milestone, m2, 07:00, 0h
 ```
