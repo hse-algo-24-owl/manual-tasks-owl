@@ -67,18 +67,18 @@ F --> B
 
 ```mermaid
 graph TB
-L((L #12 <9,8>)) --> J((J #10 <7>))
-L --> K((K #9 <8,6>))
-M((M #11 <9>)) --> K
-J --> G((G #7 <5,4>))
-I((I #8 <7,6>)) --> G
-I --> H((H #6 <5,4>))
+L((L #12 <10,9>)) --> J((J #9 <8>))
+L --> K((K #10 <9,7>))
+M((M #11 <10>)) --> K
+J --> G((G #8 <6,4>))
+I((I #9 <8,7>)) --> G
+I --> H((H #7 <5,3>))
 K --> I
 K --> H
-K --> F((F #4 <>))
-G --> C((C #5 <>))
-G --> D((D #3 <>))
-H --> E((E #2 <>))
+K --> F((F #5 <2>))
+G --> C((C #6 <1>))
+G --> D((D #4 <1>))
+H --> E((E #3 <2,1>))
 H --> F
 C --> A((A #1 <>))
 D --> A
@@ -97,18 +97,18 @@ gantt
     Начало выполнения работ : milestone, m1, 00:00, 0h
     section Исполнитель 1
     L         :l, 00:00, 1h
-    M         :m, after l, 1h
-    K         :k, after m, 1h
-    I         :i, after k, 1h
-    G         :g, after i, 1h
-    C         :c, after g, 1h
-    A         :a, after c, 1h
+    M         :j, after l, 1h
+    K         :g, after m, 1h
+    I         :c, after k, 1h
+    G         :d, after i, 1h
+    C         :a, after g, 1h
+    A         :b, after c, 1h
     section Исполнитель 2
-    J         :j, 00:00, 1h
-    D         :d, after j, 1h
-    H         :h, after d, 1h
-    E         :e, after h, 1h
-    F         :f, after e, 1h
-    B         :b, after f, 1h
+    J         :m, 00:00, 1h
+    D         :k, after j, 1h
+    H         :i, after d, 1h
+    E         :h, after h, 1h
+    F         :e, after e, 1h
+    B         :f, after f, 1h
     Окончание выполнения работ : milestone, m2, 07:00, 0h
 ```
