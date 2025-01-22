@@ -77,13 +77,13 @@ K-->N
 ### Граф зависимостей с приоритетами:
 ```mermaid
 graph TB
-A((A #14 <11,12,13>))-->B((B #11 <9>))
+A((A #14 <11,12,13>))-->B((B #11 <8>))
 A-->D((D #12 <10>))
-A-->C((C #13 <10,8>))
-B-->E((E #9 <5,4>))
+A-->C((C #13 <10,9>))
+B-->E((E #8 <5,4>))
 D-->F((F #10 <7,5>))
 C-->F
-C-->G((G #8 <6>))
+C-->G((G #9 <6>))
 E-->H((H #4 <1>))
 E-->I((I #5 <1>))
 F-->I
@@ -110,14 +110,14 @@ gantt
     A         :a, 00:00, 1h
     D         :d, after a, 1h    
     F         :f, after d, 1h    
-    G         :g, after f, 1h
+    E         :e, after f, 1h
     K         :k, after g, 1h
     H         :h, after k, 1h
     M         :m, after h, 1h
     section Исполнитель 2
     C         :c, after a, 1h
     B         :b, after c, 1h
-    E         :e, after b, 1h
+    G         :g, after b, 1h
     J         :j, after e, 1h
     I         :i, after j, 1h
     N         :n, after i, 1h
