@@ -96,6 +96,12 @@ graph LR
     D --- 2
     D --- 3
     E --- 5
+    style A fill:#926EAE,stroke:#555,stroke-width:2px
+    style 5 fill:#926EAE,stroke:#555,stroke-width:2px
+    style D fill:#926EAE,stroke:#555,stroke-width:2px
+    style 1 fill:#926EAE,stroke:#555,stroke-width:2px
+    style B fill:#926EAE,stroke:#555,stroke-width:2px
+    style 4 fill:#926EAE,stroke:#555,stroke-width:2px
 ```
 
 Попытаемся построить дерево из оставшейся непокрытой вершины E.
@@ -123,13 +129,13 @@ Y = \{5 \}
 
 |       | **1** | **2** | **3** | **4** | **5** |
 |-------|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **A** |   *5*   |   *1*   |   **0**   |   *3*   |   *0*   |
-| **B** |   6   |   1   |   1   |   0   |   *0*   |
-| **C** |   7   |   3   |   2   |   1   |   *3*   |
-| **D** |   0   |   0   |   0   |   2   |   *8*   |  
-| **E** |   *4*   |   **0**   |   **0**   |   *3*   |   *3*   | 
+| **A** |   5   |   1   |   **0**   |   3   |   0   |
+| **B** |   6   |   1   |   1   |   0   |   3   |
+| **C** |   7   |   3   |   2   |   1   |   3   |
+| **D** |   0   |   0   |   0   |   2   |   8  |  
+| **E** |   4   |   **0**   |   **0**   |   3   |   3   | 
 
-В ячейах А4, E2 и E3 появились новые нулевые значения, добавим соответствующие ребра в двудольный граф.
+В ячейках А3, E2 и E3 появились новые нулевые значения, добавим соответствующие ребра в двудольный граф.
 
 ```mermaid
 graph LR
@@ -149,11 +155,149 @@ graph LR
     end
     A -.- 5
     B -.- 4
+    B --- 5
     D -.- 1
     D --- 2
     D --- 3
     E --- 5
-    A --- 4
+    C --- 5
+    A --- 3
     E --- 2
     E --- 3
+    style A fill:#926EAE,stroke:#555,stroke-width:2px
+    style 5 fill:#926EAE,stroke:#555,stroke-width:2px
+    style D fill:#926EAE,stroke:#555,stroke-width:2px
+    style 1 fill:#926EAE,stroke:#555,stroke-width:2px
+    style B fill:#926EAE,stroke:#555,stroke-width:2px
+    style 4 fill:#926EAE,stroke:#555,stroke-width:2px
 ```
+**4**. Попытаемся построить совершенное паросочетание с помощью чередующихся деревьев.
+
+```mermaid
+graph LR
+    E(E - 0 фр.)  --> 5(5 - 1 фр.) -.-> A(A - 2 фр.)  --> 3(3 - 3 фр.) 
+```
+
+Построенное дерево содержит чередующуюся, относительно текущего паросочетания, цепь E5 - 5A - A3, цепь начинается и заканчивается в непокрытых вершинах, все ребра в цепи чередуются по вхождению в текущее паросочетание.
+
+"Перекрасим" найденную цепь и проверим полученное паросочетание.
+
+```mermaid
+graph LR
+    E(E) -.-> 5(5) --> A(A) -.-> 3(3)
+```
+
+```mermaid
+graph LR
+    subgraph "Доля 1"
+        A[A]
+        B[B]
+        C[C]
+        D[D]
+        E[E]
+    end
+    subgraph "Доля 2"
+        1[1]
+        2[2]
+        3[3]
+        4[4]
+        5[5]
+    end
+    A --- 5
+    B -.- 4
+    B --- 5
+    D -.- 1
+    D --- 2
+    D --- 3
+    E -.- 5
+    C --- 5
+    A -.- 3
+    E --- 2
+    E --- 3
+    style E fill:#926EAE,stroke:#555,stroke-width:2px
+    style 5 fill:#926EAE,stroke:#555,stroke-width:2px
+    style D fill:#926EAE,stroke:#555,stroke-width:2px
+    style 1 fill:#926EAE,stroke:#555,stroke-width:2px
+    style B fill:#926EAE,stroke:#555,stroke-width:2px
+    style 4 fill:#926EAE,stroke:#555,stroke-width:2px
+    style A fill:#926EAE,stroke:#555,stroke-width:2px
+    style 3 fill:#926EAE,stroke:#555,stroke-width:2px
+```
+**5.**  Снова запускаем волновой метод
+
+```mermaid
+graph LR
+    С(С - 0 фр.)  --> 5(5 - 1 фр.) -.-> E(E - 2 фр.)  --> 2(2 - 3 фр.) 
+```
+Построенное дерево содержит чередующуюся, относительно текущего паросочетания, цепь, цепь начинается и заканчивается в непокрытых вершинах, все ребра в цепи чередуются по вхождению в текущее паросочетание.
+
+"Перекрасим" найденную цепь и проверим полученное паросочетание.
+
+```mermaid
+graph LR
+    c(C) -.-> 5(5) --> E(E) -.-> 2(2)
+```
+
+```mermaid
+graph LR
+    subgraph "Доля 1"
+        A[A]
+        B[B]
+        C[C]
+        D[D]
+        E[E]
+    end
+    subgraph "Доля 2"
+        1[1]
+        2[2]
+        3[3]
+        4[4]
+        5[5]
+    end
+    A --- 5
+    B -.- 4
+    B --- 5
+    D -.- 1
+    D --- 2
+    D --- 3
+    E --- 5
+    C -.- 5
+    A -.- 3
+    E -.- 2
+    E --- 3
+    style E fill:#926EAE,stroke:#555,stroke-width:2px
+    style 5 fill:#926EAE,stroke:#555,stroke-width:2px
+    style D fill:#926EAE,stroke:#555,stroke-width:2px
+    style 1 fill:#926EAE,stroke:#555,stroke-width:2px
+    style B fill:#926EAE,stroke:#555,stroke-width:2px
+    style 4 fill:#926EAE,stroke:#555,stroke-width:2px
+    style A fill:#926EAE,stroke:#555,stroke-width:2px
+    style 3 fill:#926EAE,stroke:#555,stroke-width:2px
+    style C fill:#926EAE,stroke:#555,stroke-width:2px
+    style 2 fill:#926EAE,stroke:#555,stroke-width:2px
+
+```
+В полученном графе все вершины покрыты, значит полученное расписание является совершенным. Выпишем полученные назначения и их стоимости из исходной матрицы:
+
+|       | **1** | **2** | **3** | **4** | **5** |
+|-------|:-----:|:-----:|:-----:|:-----:|:-----:|
+| **A** |   14   |   11   |   **8**  |   14   |   5   |
+| **B** |   12   |   8   |   6   |   **8**   |   5   |
+| **C** |   15   |   12   |   9   |   11   |   **7**   |
+| **D** |   **11**   |   12   |   10   |   15   |   15   |
+| **E** |   13   |   **10**   |   8   |   14   |   5   |
+- A3 - 8
+- B4 - 4
+- C5 - 7
+- D1 - 11
+- E2 - 10
+
+Общая стоимость затрат = 8 + 4 + 7 + 11 + 10 = 40.
+
+## Ответ
+Минимальная стоимость затрат 40, при следующих назначениях:
+- задача D, исполнитель 1,
+- задача E, исполнитель 2,
+- задача A, исполнитель 3,
+- задача B, исполнитель 4.
+- задача C, исполнитель 5.
