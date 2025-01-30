@@ -170,7 +170,7 @@ graph LR
     b-->|8|t
     t-.->|**7**|c
     style t fill:#926EAE,stroke:#555,stroke-width:2px
-    style b fill:#926EAE,stroke:#555,stroke-width:2px
+    style s fill:#926EAE,stroke:#555,stroke-width:2px
     style c fill:#926EAE,stroke:#555,stroke-width:2px
 ```
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
