@@ -105,7 +105,7 @@ graph LR
     b-->|5|t
     t-.->|**3**|b
     t-.->|7|c
-    style a fill:#926EAE,stroke:#555,stroke-width:2px
+    style s fill:#926EAE,stroke:#555,stroke-width:2px
     style t fill:#926EAE,stroke:#555,stroke-width:2px
     style b fill:#926EAE,stroke:#555,stroke-width:2px
     style c fill:#926EAE,stroke:#555,stroke-width:2px
