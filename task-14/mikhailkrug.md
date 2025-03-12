@@ -93,8 +93,9 @@ graph LR
     I --> |0|t
     II --> |0|t
 linkStyle 2 stroke:red;
-linkStyle 3 stroke:red;
+linkStyle 6 stroke:red;
 linkStyle 4 stroke:red;
+linkStyle 7 stroke:red;
 ```
 В построенной остаточной сети найден цикл отрицательной стоимости:
 ```mermaid
